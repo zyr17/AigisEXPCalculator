@@ -1,0 +1,54 @@
+﻿<Window x:Class="AigisEXPCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Name="rb1" Click="Click" Content="铁" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton Name="rb2" Click="Click" Content="铜" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton Name="rb3" Click="Click" Content="银" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton Name="rb4" Click="Click" Content="金" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton Name="rb5" Click="Click" Content="白" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton Name="rb6" Click="Click" IsChecked="True" Content="黑" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+        <TextBlock Grid.Row="1" Text="现在等级" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="现在经验" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="NowLV" TextChanged="TextChanged" Text="1" Grid.Row="2" Height="24" FontSize="20" Margin="10"/>
+        <TextBox Name="NowEXP" TextChanged="TextChanged" Grid.Row="2" Grid.Column="1" Height="24" FontSize="20" Margin="10"/>
+        <TextBlock Grid.Row="3" Text="目标等级" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="目标经验" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="ToLV" TextChanged="TextChanged" Text="99" Grid.Row="4" Height="24" FontSize="20" Margin="10"/>
+        <TextBox Name="ToEXP" TextChanged="TextChanged" Grid.Row="4" Grid.Column="1" Height="24" FontSize="20" Margin="10"/>
+        <TextBlock Grid.Row="5" Text="一次狗粮经验" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox Name="FeedEXP" TextChanged="TextChanged" Text="8800" Grid.Row="5" Grid.Column="1" Height="24" FontSize="20" Margin="10"/>
+        <TextBlock Grid.Row="6" Text="所需经验" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="7" Text="狗粮组数" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="8" Text="剩余经验" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Name="NeedEXP" Grid.Row="6" Grid.Column="1" Text="145967" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Name="NeedFeed" Grid.Row="7" Grid.Column="1" Text="16" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Name="RemainEXP" Grid.Row="8" Grid.Column="1" Text="5167" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
